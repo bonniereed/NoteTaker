@@ -7,7 +7,7 @@ diagnostics.get('/', (req, res) => {
 });
 
 // POST Route for a error logging
-diagnostics.post('/', (req, res) => {
+notes.post('/', (req, res) => {
     console.log(req.body);
 
     const { isValid, errors } = req.body;
