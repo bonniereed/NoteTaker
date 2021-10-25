@@ -1,4 +1,6 @@
 # 11 Express.js: Note Taker
+<img width="1434" alt="Screen Shot 2021-10-25 at 4 39 06 PM" src="https://user-images.githubusercontent.com/46511972/138774907-b3b0fba9-1f63-4e29-a13d-1b90a02449a4.png">
+
 Here is the Heroku link for my app:
 https://notetakersmu.herokuapp.com/notes
 Here is the GitHub Pages link for my app:
