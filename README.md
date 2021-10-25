@@ -1,4 +1,8 @@
 # 11 Express.js: Note Taker
+Here is the Heroku link for my app:
+https://notetakersmu.herokuapp.com/notes
+Here is the GitHub Pages link for my app:
+https://bonniereed.github.io/NoteTaker/
 
 ## Description
 
