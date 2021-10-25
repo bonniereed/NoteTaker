@@ -7,6 +7,13 @@ const PORT = process.env.port || 3001;
 
 const app = express();
 
+// Middleware for parsing JSON and urlencoded form data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+// app.use('/', api);
+
+app.use(express.static('public'));
+
 // Import custom middleware,
 const middleware = (req, res, next) => {
     // Log out the request type and resource
@@ -19,17 +26,10 @@ const middleware = (req, res, next) => {
 app.use(middleware);
 //api routes send notes in the 'get route
 app.get('/api/notes', (req, res) => res.json(notes));
-app.post('/api/notes', (req, res) => res.json(`POST route`));
-app.put('/api/notes/:id', (req, res) => res.json(`PUT route`));
-app.delete('/api/notes/:id', (req, res) => res.json(`DELETE route`));
-app.patch('/api/notes/:id', (req, res) => res.json(`PATCH route`));
-
-// Middleware for parsing JSON and urlencoded form data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-// app.use('/', api);
-
-app.use(express.static('public'));
+app.post('/api/notes', (req, res) => res.json(notes));
+app.put('/api/notes/:id', (req, res) => res.json(notes));
+app.delete('/api/notes/:id', (req, res) => res.json(notes));
+app.patch('/api/notes/:id', (req, res) => res.json(notes));
 
 // GET Route for homepage
 app.get('/', (req, res) =>

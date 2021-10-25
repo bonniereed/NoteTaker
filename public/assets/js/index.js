@@ -19,7 +19,7 @@ const show = (elem) => {
 
 // Hide an element
 const hide = (elem) => {
-    elem.style.display = 'none';
+    elem.style.display = 'none !important';
 };
 
 // activeNote is used to keep track of the note in the textarea
