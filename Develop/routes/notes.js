@@ -1,9 +1,9 @@
 const notes = require('express').Router();
-const { readAndAppend, readFromFile } = require('./db/notes.json');
+const { readAndAppend, readFromFile } = require('../db/notes.json');
 
 // GET Route for retrieving diagnostic information
-diagnostics.get('/', (req, res) => {
-    readFromFile('./db/notes.json').then((data) => res.json(JSON.parse(data)));
+notes.get('/', (req, res) => {
+    readFromFile('../db/notes.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // POST Route for a error logging
@@ -28,4 +28,4 @@ notes.post('/', (req, res) => {
     }
 });
 
-module.exports = notes;
+module.export = notes;
